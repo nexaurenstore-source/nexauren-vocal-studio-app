@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#080a0f"><title>Nexauren Vocal Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="appbar"><div class="brand"><span class="logo">N</span><div><b>NEXAUREN</b><small>VOCAL STUDIO</small></div></div><button id="theme" class="icon">☼</button></header>
+<main>
+<section class="hero"><div><span class="eyebrow">MOBILE VOCAL LAB</span><h1>Shape your <i>voice.</i></h1><p>Record, tune, enhance and export your vocal locally.</p></div></section>
+<section class="card input-card">
+<div class="status"><div><small>INPUT</small><strong id="status">Ready to record</strong></div><div class="meter"><i id="meter"></i></div></div>
+<div class="record-row"><button id="record" class="record">● Record</button><button id="upload" class="secondary">＋ Audio</button><input id="file" type="file" accept="audio/*" hidden></div>
+<audio id="source" controls hidden></audio>
+<div class="wave"><canvas id="wave"></canvas></div>
+</section>
+<section class="card"><div class="section-title"><span>PRESETS</span><button id="reset" class="textbtn">Reset</button></div><div id="presets" class="chips"></div></section>
+<section class="card"><div class="section-title"><span>EFFECTS</span><b id="effectCount">0 active</b></div><div id="effects" class="controls"></div></section>
+<section class="card"><div class="section-title"><span>PITCH CORRECTION</span><b>Auto</b></div><div class="selects"><label>Scale<select id="scale"><option value="off">Off</option><option value="chromatic">Chromatic</option><option value="major">Major</option><option value="minor">Minor</option></select></label><label>Key<select id="key"></select></label></div></section>
+<section class="card"><div class="section-title"><span>PRO TOOLS</span><b>V1</b></div><div class="controls pro"><label>Noise reduction<output id="noiseOut">45%</output><input id="noise" type="range" min="0" max="100" value="45"></label><label>Smart gate<output id="smartOut">30%</output><input id="smart" type="range" min="0" max="100" value="30"></label><label>Echo repeats<output id="echoOut">25%</output><input id="echo" type="range" min="0" max="100" value="25"></label><label>Dry / wet<output id="mixOut">100%</output><input id="mix" type="range" min="0" max="100" value="100"></label></div></section>
+<section class="actions"><button id="process" class="process">PROCESS VOCAL <span>→</span></button><button id="live" class="secondary wide">🎵 Live pitch monitor</button></section>
+<section id="analysis" class="card" hidden><div class="section-title"><span>ANALYSIS</span><button id="analyze" class="textbtn">Refresh</button></div><div class="score"><strong id="score">—</strong><span>/100<br>VOCAL SCORE</span></div><div class="stats"><div><b id="pitchStat">—</b><small>Pitch</small></div><div><b id="rangeStat">—</b><small>Range</small></div><div><b id="stabilityStat">—</b><small>Stability</small></div><div><b id="volumeStat">—</b><small>Volume</small></div><div><b id="durationStat">—</b><small>Duration</small></div></div><p id="analysisNote" class="note"></p></section>
+<section id="result" class="card result" hidden><div class="section-title"><span>MASTER</span><button id="ab" class="textbtn">A/B</button></div><h2>Your vocal is ready.</h2><p id="resultInfo"></p><audio id="player" controls></audio><div class="result-buttons"><button id="normalize" class="secondary">Normalize</button><button id="fade" class="secondary">Fade</button><button id="download" class="download">Download WAV ↓</button></div></section>
+<section class="card"><div class="section-title"><span>LOCAL SESSIONS</span><button id="clear" class="textbtn">Clear</button></div><div id="history" class="history">No sessions yet.</div></section>
+</main><footer>NEXAUREN • Audio stays on your device.</footer>
+<script src="app.js"></script>
+</body></html>

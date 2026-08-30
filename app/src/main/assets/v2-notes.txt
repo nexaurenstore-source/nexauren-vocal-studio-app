@@ -1,1 +1,0 @@
-V2 implementation is being developed in small, buildable commits. Multi-track UI and safer audio processing are prioritized before advanced DSP such as true pitch shifting/formant correction.
